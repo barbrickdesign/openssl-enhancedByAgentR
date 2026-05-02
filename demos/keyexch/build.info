@@ -4,8 +4,16 @@
 #
 #    LD_LIBRARY_PATH=../.. ./x25519
 
-PROGRAMS{noinst} = x25519
+PROGRAMS{noinst} = x25519 ecdh ml_kem
 
 INCLUDE[x25519]=../../include
 SOURCE[x25519]=x25519.c
 DEPEND[x25519]=../../libcrypto
+
+INCLUDE[ecdh]=../../include
+SOURCE[ecdh]=ecdh.c
+DEPEND[ecdh]=../../libcrypto
+
+INCLUDE[ml_kem]=../../include
+SOURCE[ml_kem]=ml_kem.c
+DEPEND[ml_kem]=../../libcrypto

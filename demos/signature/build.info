@@ -7,6 +7,8 @@
 PROGRAMS{noinst} = EVP_EC_Signature_demo \
                    EVP_DSA_Signature_demo \
                    EVP_ED_Signature_demo \
+                   EVP_ML_DSA_Signature_demo \
+                   EVP_SLH_DSA_Signature_demo \
                    rsa_pss_direct \
                    rsa_pss_hash
 
@@ -21,6 +23,14 @@ DEPEND[EVP_DSA_Signature_demo]=../../libcrypto
 INCLUDE[EVP_ED_Signature_demo]=../../include
 SOURCE[EVP_ED_Signature_demo]=EVP_ED_Signature_demo.c
 DEPEND[EVP_ED_Signature_demo]=../../libcrypto
+
+INCLUDE[EVP_ML_DSA_Signature_demo]=../../include
+SOURCE[EVP_ML_DSA_Signature_demo]=EVP_ML_DSA_Signature_demo.c
+DEPEND[EVP_ML_DSA_Signature_demo]=../../libcrypto
+
+INCLUDE[EVP_SLH_DSA_Signature_demo]=../../include
+SOURCE[EVP_SLH_DSA_Signature_demo]=EVP_SLH_DSA_Signature_demo.c
+DEPEND[EVP_SLH_DSA_Signature_demo]=../../libcrypto
 
 INCLUDE[rsa_pss_direct]=../../include
 SOURCE[rsa_pss_direct]=rsa_pss_direct.c
